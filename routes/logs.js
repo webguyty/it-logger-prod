@@ -3,10 +3,6 @@ const router = express.Router();
 
 const Logs = require('../models/Logs');
 
-// router.get('/', (req, res) => {
-//   res.send('logs api');
-// });
-
 // // @route		GET api/logs
 // // @desc		Get all logs
 // // @access 	Public
@@ -93,7 +89,6 @@ router.put('/:id', async (req, res) => {
 // @access 	Public
 router.get('/search/:str', async (req, res) => {
   try {
-    // res.send(req.params.str);
     const logs = await Logs.find({
       $or: [
         { message: { $regex: req.params.str, $options: 'i' } },
