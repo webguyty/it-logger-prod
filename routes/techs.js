@@ -3,10 +3,6 @@ const router = express.Router();
 
 const Techs = require('../models/Techs');
 
-// router.get('/', (req, res) => {
-//   res.send('techs api');
-// });
-
 // @route		GET api/techs
 // @desc		Get all techs
 // @access 	Public
